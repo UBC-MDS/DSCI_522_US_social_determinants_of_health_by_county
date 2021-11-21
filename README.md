@@ -1,10 +1,9 @@
-# DSCI_522_group25
-
 ---
 editor_options: 
   markdown: 
     wrap: 72
 ---
+
 # U.S. Social Determinants of Health per County
 Authors: Joshua Sia, Morgan Rosenberg, Sufang Tan, Yinan Guo \[Group
 25\]
