@@ -33,12 +33,14 @@ To replicate the analysis, install
 repository and run the following command at the command line/terminal
 from the root directory of this project:
 
-    docker run --rm -v /$(pwd):/home/rstudio/determinants_of_health <IMAGE NAME>:<TAG> make -C /home/rstudio/determinants_of_health all
+    docker run --rm -v /$(pwd):/home/rstudio/determinants_of_health <IMAGE NAME>:<TAG> -e PASSWORD=<YOUR_PASSWORD> -p 8787:8787 make -C /home/rstudio/determinants_of_health all
     
+Please then go to [RStudio Local Host](http://localhost:8787/) to sign in using the password you set in the command above. The username should be `rstudio`. 
+
 To reset the project to a clean state with no intermediate files, run the following command at the command line/terminal from the root directory of this project:
 
-    docker run --rm -v /$(pwd):/home/rstudio/determinants_of_health <IMAGE NAME>:<TAG> make -C /home/rstudio/determinants_of_health clean
-    
+    docker run --rm -v /$(pwd):/home/rstudio/determinants_of_health <IMAGE NAME>:<TAG> -e PASSWORD=<YOUR_PASSWORD> -p 8787:8787 make -C /home/rstudio/determinants_of_health clean
+
 It may also be necessary to allocate more memory to the Docker container. To do this, open the Docker application, enter Settings, click on the Resources tab, and increase the Memory allocated using the slider.
     
 #### 2\. Without using Docker
